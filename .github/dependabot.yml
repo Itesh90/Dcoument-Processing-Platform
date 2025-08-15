@@ -1,0 +1,87 @@
+version: 2
+updates:
+  # Enable version updates for Python
+  - package-ecosystem: "pip"
+    directory: "/backend"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "09:00"
+    open-pull-requests-limit: 10
+    reviewers:
+      - "your-username"
+    assignees:
+      - "your-username"
+    commit-message:
+      prefix: "pip"
+      prefix-development: "pip-dev"
+      include: "scope"
+
+  # Enable version updates for npm
+  - package-ecosystem: "npm"
+    directory: "/frontend"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "09:00"
+    open-pull-requests-limit: 10
+    reviewers:
+      - "your-username"
+    assignees:
+      - "your-username"
+    commit-message:
+      prefix: "npm"
+      prefix-development: "npm-dev"
+      include: "scope"
+
+  # Enable version updates for GitHub Actions
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "09:00"
+    open-pull-requests-limit: 10
+    reviewers:
+      - "your-username"
+    assignees:
+      - "your-username"
+    commit-message:
+      prefix: "github-actions"
+      prefix-development: "github-actions-dev"
+      include: "scope"
+
+  # Enable version updates for Docker
+  - package-ecosystem: "docker"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "09:00"
+    open-pull-requests-limit: 10
+    reviewers:
+      - "your-username"
+    assignees:
+      - "your-username"
+    commit-message:
+      prefix: "docker"
+      prefix-development: "docker-dev"
+      include: "scope"
+
+  # Enable version updates for Docker Compose
+  - package-ecosystem: "docker"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "09:00"
+    open-pull-requests-limit: 10
+    reviewers:
+      - "your-username"
+    assignees:
+      - "your-username"
+    commit-message:
+      prefix: "docker-compose"
+      prefix-development: "docker-compose-dev"
+      include: "scope"
+    target-branch: "develop"
