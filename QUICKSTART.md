@@ -38,7 +38,7 @@ This script will:
 Copy the example environment file and update it with your settings:
 
 ```bash
-cp env.example .env
+cp .env.example .env
 ```
 
 Edit the `.env` file and update the following key settings:

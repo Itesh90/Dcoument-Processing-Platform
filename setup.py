@@ -8,6 +8,7 @@ import os
 import sys
 import subprocess
 import shutil
+import time
 from pathlib import Path
 
 def run_command(command, cwd=None):
@@ -110,7 +111,6 @@ def setup_database():
     
     # Wait for services to be ready
     print("Waiting for services to be ready...")
-    import time
     time.sleep(10)
     
     print("✅ Database setup complete!")
@@ -120,8 +120,8 @@ def create_env_file():
     """Create environment file from example"""
     print("\n📝 Creating environment file...")
     
-    if not Path(".env").exists() and Path("env.example").exists():
-        shutil.copy("env.example", ".env")
+    if not Path(".env").exists() and Path(".env.example").exists():
+        shutil.copy(".env.example", ".env")
         print("✅ Environment file created from example!")
         print("⚠️  Please review and update the .env file with your configuration.")
     else:
