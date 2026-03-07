@@ -103,7 +103,7 @@ Document Processing Platform/
 │   └── Dockerfile           # Frontend container
 ├── docker-compose.yml        # Docker orchestration
 ├── setup.py                 # Setup script
-├── env.example              # Environment variables template
+├── .env.example             # Environment variables template
 ├── README.md                # Project documentation
 ├── QUICKSTART.md            # Quick start guide
 └── PROJECT_SUMMARY.md       # This file
